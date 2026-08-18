@@ -198,3 +198,115 @@ The technology will be validated in four phases:
 - **Phase B – Microscopic object teleportation:** Transfer a 100 nm nanocrystal between two nodes 1 m apart with fidelity F > 0.99.
 - **Phase C – Macroscopic object teleportation:** Transfer a 1 g object between nodes 100 m apart. Requires 10⁴ qubits, achievable within 10 years.
 - **Phase D – Human teleportation:** After successful Phases A–C and ethical approval, perform the first human teleportation between default gates. Estimated 20–30 years from program start.
+
+---
+
+## Project Structure
+
+```text
+phi_teleport/
+├── __init__.py
+├── constants.py
+├── loopos_bridge.py
+├── quantum/
+│   ├── __init__.py
+│   ├── qubit_array.py
+│   ├── informion_source.py
+│   ├── entanglement_channel.py
+│   ├── redundant_channel.py
+│   ├── decoherence_model.py
+│   ├── dynamic_target.py
+│   ├── dynamic_target_ekf.py
+│   └── async_sync_protocol.py
+├── control/
+│   ├── __init__.py
+│   ├── teleportation_controller.py
+│   ├── bridge_energy_optimizer.py
+│   ├── pontryagin_optimizer.py
+│   ├── safety_monitor.py
+│   ├── elegance_evaluator.py
+│   ├── system_identifier.py
+│   ├── elegance_trajectory_monitor.py
+│   ├── convergence_monitor.py
+│   └── self_evolution.py
+├── network/
+│   ├── __init__.py
+│   ├── gate_network.py
+│   ├── distributed_consensus.py
+│   └── phi_map.py
+├── maintenance/
+│   ├── __init__.py
+│   └── predictive_maintenance.py
+└── sim/
+    ├── __init__.py
+    ├── full_lattice_simulation.py
+    └── lindblad_master_equation.py
+```
+
+## Module Overview
+
+### `phi_teleport/quantum`
+Core quantum-layer primitives for entanglement generation, channel management, decoherence estimation, target tracking, and synchronization.
+
+### `phi_teleport/control`
+High-level orchestration and optimization logic, including lifecycle state machine, safety checks, elegance scoring, online parameter identification, and self-evolution loop support.
+
+### `phi_teleport/network`
+Routing and distributed-network intelligence for multi-gate deployments, including shortest-path routing, gossip consensus, and global Φ-map aggregation.
+
+### `phi_teleport/maintenance`
+Predictive diagnostics for gate health based on temporal Φ trends and degradation acceleration.
+
+### `phi_teleport/sim`
+Simulation layer for lattice-level coherence evolution and small-chain Lindblad dynamics.
+
+## File Index (Direct Links)
+
+### Top-level package files
+
+- [`phi_teleport/__init__.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/__init__.py)
+- [`phi_teleport/constants.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/constants.py)
+- [`phi_teleport/loopos_bridge.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/loopos_bridge.py)
+
+### Quantum layer
+
+- [`phi_teleport/quantum/__init__.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/quantum/__init__.py)
+- [`phi_teleport/quantum/qubit_array.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/quantum/qubit_array.py)
+- [`phi_teleport/quantum/informion_source.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/quantum/informion_source.py)
+- [`phi_teleport/quantum/entanglement_channel.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/quantum/entanglement_channel.py)
+- [`phi_teleport/quantum/redundant_channel.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/quantum/redundant_channel.py)
+- [`phi_teleport/quantum/decoherence_model.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/quantum/decoherence_model.py)
+- [`phi_teleport/quantum/dynamic_target.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/quantum/dynamic_target.py)
+- [`phi_teleport/quantum/dynamic_target_ekf.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/quantum/dynamic_target_ekf.py)
+- [`phi_teleport/quantum/async_sync_protocol.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/quantum/async_sync_protocol.py)
+
+### Control layer
+
+- [`phi_teleport/control/__init__.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/__init__.py)
+- [`phi_teleport/control/teleportation_controller.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/teleportation_controller.py)
+- [`phi_teleport/control/bridge_energy_optimizer.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/bridge_energy_optimizer.py)
+- [`phi_teleport/control/pontryagin_optimizer.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/pontryagin_optimizer.py)
+- [`phi_teleport/control/safety_monitor.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/safety_monitor.py)
+- [`phi_teleport/control/elegance_evaluator.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/elegance_evaluator.py)
+- [`phi_teleport/control/system_identifier.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/system_identifier.py)
+- [`phi_teleport/control/elegance_trajectory_monitor.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/elegance_trajectory_monitor.py)
+- [`phi_teleport/control/convergence_monitor.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/convergence_monitor.py)
+- [`phi_teleport/control/self_evolution.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/control/self_evolution.py)
+
+### Network layer
+
+- [`phi_teleport/network/__init__.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/network/__init__.py)
+- [`phi_teleport/network/gate_network.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/network/gate_network.py)
+- [`phi_teleport/network/distributed_consensus.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/network/distributed_consensus.py)
+- [`phi_teleport/network/phi_map.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/network/phi_map.py)
+
+### Maintenance layer
+
+- [`phi_teleport/maintenance/__init__.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/maintenance/__init__.py)
+- [`phi_teleport/maintenance/predictive_maintenance.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/maintenance/predictive_maintenance.py)
+
+### Simulation layer
+
+- [`phi_teleport/sim/__init__.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/sim/__init__.py)
+- [`phi_teleport/sim/full_lattice_simulation.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/sim/full_lattice_simulation.py)
+- [`phi_teleport/sim/lindblad_master_equation.py`](https://github.com/Crazy-Chimera/phi-Teleport/blob/main/phi_teleport/sim/lindblad_master_equation.py)
