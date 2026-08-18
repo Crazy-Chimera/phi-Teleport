@@ -1,0 +1,1 @@
+from .predictive_maintenance import PredictiveMaintenance
